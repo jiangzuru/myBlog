@@ -1,0 +1,32 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+    <title>博客后台管理</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" type="text/css" href="/Public/Css/blog.css">
+    <script type="text/javascript" src="/Public/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+    <div class="bg">
+        <div class="top">
+            <h2 class="white">&nbsp江祖如的博客</h2>
+        </div>
+
+        <div class="blogtext">
+            <h2 class="white"><?php echo ($blog[ArticleTitle]); ?></h2>
+            <hr>
+            <div class="white content">
+                <?php echo ($blog[ArticleContent]); ?>
+            </div>
+            <hr class="hr_dashed">
+        </div>
+        <div class="comment">
+
+        </div>
+    </div>
+<script type="text/javascript" src="/Public/Js/jquery-1.8.3.min.js"></script>
+</body>
+</html>

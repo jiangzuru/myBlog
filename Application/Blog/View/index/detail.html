@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>江祖如的博客</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" type="text/css" href="/Public/Css/base.css">
+    <link rel="stylesheet" type="text/css" href="/Public/Css/visitor.css">
+</head>
+<body>
+        <div id="header">
+            <div id="branding">
+                <div id="log">
+                    <a href="/Index/index"><h2 id="log">江祖如的博客</h2></a>
+                </div>
+            </div>
+        </div>
+        <div class="mb"></div>
+        <div id="wrapper">
+            <div id="main">
+                    <div id="content">
+                        <h3><a href="#">{$blog[ArticleTitle]}</a></h3>
+                        <abbr>{$blog[PostTime]}&nbsp|&nbsp浏览次数:{$blog[ArticlePv]}</abbr>
+                        {$blog[ArticleContent]}
+                    </div>
+            </div>
+            <div id="comment_div">
+                <div id="cm-header"><h4>评论</h4></div>
+                <ul class="comment_ul">
+                    <div id="inputBox">
+                        <span class="close"></span>
+                        <form>
+                            <input type="hidden" id="cm_articleId" value="{$blog[ArticleID]}">
+                            <p ><input type="text" name="email" class="message" id="email" placeholder="&nbsp 请输入邮箱"/></p>
+                            <p ><input type="text" name="comment" class="message" id="comment" placeholder="&nbsp 请输入评论"/></p>
+                            <input type="submit" value="确认"  class="button" id="submit_btn"/>
+                        </form>
+                    </div>
+                </ul>
+                <div class="display_flex flex_1 cm_input">
+                    <div><img src="/Public/Image/noavatar_default.jpg"></div>
+                    <div>
+                        <input class="cm_writer" id="cm_writer" placeholder="请输入邮箱">
+                        <textarea class="cm_text" id="cm_comment"placeholder="快说点什么吧"></textarea>
+                        <p></p>
+                        <button class="reply_btn button">发布</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<script type="text/javascript" src="/Public/Js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/Public/Js/blog.js"></script>
+<script type="text/javascript" src="/Public/Js/detail.js"></script>
+</body>
+</html>
